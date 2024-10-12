@@ -6,9 +6,9 @@ import torch
 from torchvision import transforms
 import cv2
 
-st.title("👨🏽‍💻 AI-Powered Face similarity search - use AI to identify matching faces 🧑🏽‍💻")
-st.subheader("Developed by Yuval Avidani with ❤️ to help our Israeli people")
-st.caption("Please note: This app is only an estimation and is not a replacement in any way to human work.")
+st.title("👨🏽‍💻 AI-Powered Face similarity search")
+# st.subheader("Developed by Raavi with ❤️")
+# st.caption("Please note: This app is only an estimation and is not a replacement in any way to human work.")
 st.subheader("Upload 2 facial images and check if it is similar or not")
 uploaded_file1 = st.file_uploader("Choose an image...", type=["jpg", "png", "gif"])
 uploaded_file2 = st.file_uploader("Choose another image...", type=["jpg", "png", "gif"])
@@ -82,3 +82,35 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
             st.success("The faces are similar.")
         else:
             st.error("The faces are not similar.")
+
+footer = """
+<style>
+a:link, a:visited {
+    color: #FFFFFF;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:hover, a:active {
+    color: #7AE7C7;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: #F5BF03;
+    text-align: center;
+}
+</style>
+<div class="footer">
+    <h6 style='text-align: center;'>
+        <span style='color: #F81F6F;'>Developed with </span> 
+        <span style='color: #f5f8fc;'> ❤ by Raavi </span>
+    </h6>
+</div>
+"""
+# Now, you can use this string in Streamlit's markdown
+st.markdown(footer, unsafe_allow_html=True)
