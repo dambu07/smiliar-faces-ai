@@ -114,3 +114,16 @@ a:hover, a:active {
 """
 # Now, you can use this string in Streamlit's markdown
 st.markdown(footer, unsafe_allow_html=True)
+
+###--- Hide Streamlit footer---###
+
+#--------------------------------------------------------------------
+hide_st_style = """
+<style>
+MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_st_style, unsafe_allow_html=True)
+#--------------------------------------------------------------------

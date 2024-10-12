@@ -1,4 +1,8 @@
 [server]
 enableCORS = false
 enableXsrfProtection = false
-
+primaryColor="#FFFFFF"
+backgroundColor="#000000"
+secondaryBackgroundColor="#222222"
+textColor="#F5F8FC"
+font="montserrat"
